@@ -1,0 +1,28 @@
+<h1>Departamentos</h1>
+ 
+<ul class="example-animate-container">
+  
+
+  
+
+
+    <table >
+      <tbody>
+        <tr *ngFor="let departamento of departamentos | async" style="width: 300px;">
+          <td>{{departamento.nombre}}</td>
+        
+          <td>
+  
+            <button type="button" class="button btn-danger" (click)='onEdit(departamento)'>Editar</button>
+       
+            <button type="button" class="button btn-danger" (click)='onDelete(departamento)'>Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</ul>
+ 
+<div>
+  <button type="button" class="button btn-danger" (click)='deletedepartamentos()'>Delete All</button>
+</div>
